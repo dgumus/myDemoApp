@@ -15,7 +15,7 @@ import spark.template.mustache.MustacheTemplateEngine;
 
 public class App{
     public static boolean search(ArrayList<Integer> array, ArrayList<Integer> array1, int e,int d) {
-      System.out.println(" eğer iki arraylistten herhangi birinde dahi integerlardan biri, onların toplamı ya da çarpımı olursa return true ");
+      System.out.println(" ");
       if (array == null) return false;
       if(array1 == null) return false;
       
@@ -39,7 +39,7 @@ public class App{
     public static void main(String[] args) {
         port(getHerokuAssignedPort());
 
-        get("/", (req, res) -> "Hello, World");
+        get("/", (req, res) -> " Welcome to my first HW ! ");
 
         post("/compute", (req, res) -> {
           //System.out.println(req.queryParams("input1"));

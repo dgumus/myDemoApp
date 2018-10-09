@@ -1,16 +1,22 @@
 
 <title>My application deployed automatically</title>
-  <h1>Hello, World! I am Deniz!</h1>
+  <h1 style="font-size:40px;">Hello, World! I am Deniz! And this is my function</h1>
    <p>Please enter list of integers to the first and second box, 
    and enter your integers to the third and fourth box to search if they are in any of these lists or their multiplication or their sum</p>
     Result is {{result}}
+    <hr>
 
 
   <form action="compute" method="post">
-        <textarea name="input1" rows="10" cols="30"></textarea>
-        <textarea name="input2" rows="10" cols="30"></textarea>
-        <textarea name="input3" rows="10" cols="30"></textarea>
-        <textarea name="input4" rows="10" cols="30"></textarea>
+        <p><b>First Arraylist</b></p>
+        <textarea name="input1" rows="10" cols="10"></textarea>
+         <p><b>Second Arraylist</b></p>
+        <textarea name="input2" rows="10" cols="10"></textarea>
+        <hr>
+        <p><b>First Integer</b></p>
+        <textarea name="input3" rows="5" cols="10"></textarea>
+        <p><b>Second Integer</b></p>
+        <textarea name="input4" rows="5" cols="10"></textarea>
         <br>
         <input type="submit">
   </form>

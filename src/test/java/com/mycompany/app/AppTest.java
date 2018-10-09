@@ -43,12 +43,32 @@ public class AppTest
     }
 
 
-    public void testFound() {
+    public void testFoundInBoth() {
       ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
-      ArrayList<Integer> array1 = new ArrayList<>(Arrays.asList(5,6,7,8));
-      assertTrue(new App().search(array,array1, 4,5));
+      ArrayList<Integer> array1 = new ArrayList<>(Arrays.asList(1,2,3,5));
+      assertTrue(new App().search(array,array1, 2,3));//iki arraylistte de bu degerler var
+    }
+    public void testFoundJustFirstArrayList() {
+        ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+        ArrayList<Integer> array1 = new ArrayList<>(Arrays.asList(100,200));
+        assertTrue(new App().search(array,array1, 2,3));//bu degerler sadece ilk arraylistte var
+    }
+    public void testFoundJustSecondArrayList() {
+        ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+        ArrayList<Integer> array1 = new ArrayList<>(Arrays.asList(100,200));
+        assertTrue(new App().search(array,array1, 100,200));//bu degerler sadece ikinci array. var
+    }
+    public void testFoundFromSum() {
+        ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 7));
+        ArrayList<Integer> array1 = new ArrayList<>(Arrays.asList(5,6));
+        assertTrue(new App().search(array,array1, 4,3 ));// 4 ve 3 değerlerinden 7 ye sum ile ulasmali
     }
 
+    public void testFoundFromMul() {
+        ArrayList<Integer> array = new ArrayList<>(Arrays.asList(12,3));
+        ArrayList<Integer> array1 = new ArrayList<>(Arrays.asList(5,8));
+        assertTrue(new App().search(array,array1, 2,6));//2 ve 6 dan 12 ye sadece multi. ile ulasmali
+    }  
     public void testNotFound() {
       ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2));
       ArrayList<Integer> array1 = new ArrayList<>(Arrays.asList(5,6));
